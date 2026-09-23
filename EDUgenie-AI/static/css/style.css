@@ -1,0 +1,417 @@
+/* =========================
+   Global
+========================= */
+
+:root {
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #18202a;
+
+    background: #f5f7fb;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #e6f0ff 0,
+            transparent 35%
+        ),
+        #f5f7fb;
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+.container {
+
+    width: min(
+        920px,
+        calc(100% - 32px)
+    );
+
+    margin: 0 auto;
+
+    padding: 48px 0;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: #e9eefc;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(
+            40px,
+            8vw,
+            64px
+        );
+
+    margin:
+        10px 0 4px;
+}
+
+
+.hero p {
+
+    margin:
+        0 auto;
+
+    max-width: 650px;
+
+    color: #5b6573;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   Cards
+========================= */
+
+.card {
+
+    background: white;
+
+    border:
+        1px solid
+        #e1e6ee;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(
+            24,
+            32,
+            42,
+            0.06
+        );
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   Labels
+========================= */
+
+label {
+
+    display: block;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   Inputs
+========================= */
+
+select,
+textarea {
+
+    width: 100%;
+
+    border:
+        1px solid
+        #cfd6e1;
+
+    border-radius: 12px;
+
+    padding:
+        12px 14px;
+
+    font: inherit;
+
+    margin-bottom: 18px;
+
+    background: white;
+
+    color: #18202a;
+}
+
+
+textarea {
+
+    resize: vertical;
+
+    min-height: 150px;
+
+    line-height: 1.5;
+}
+
+
+select:focus,
+textarea:focus {
+
+    outline: 2px solid #b9c9ff;
+
+    border-color: #7187e8;
+}
+
+
+/* =========================
+   Button
+========================= */
+
+button {
+
+    width: 100%;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    padding:
+        14px 18px;
+
+    font: inherit;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    background: #18202a;
+
+    color: white;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+}
+
+
+button:hover {
+
+    transform: translateY(-1px);
+}
+
+
+button:disabled {
+
+    opacity: 0.6;
+
+    cursor: wait;
+}
+
+
+/* =========================
+   Status
+========================= */
+
+.status {
+
+    min-height: 22px;
+
+    color: #5b6573;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   Hidden
+========================= */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* =========================
+   Result
+========================= */
+
+.result-card h2 {
+
+    margin-top: 0;
+}
+
+
+.result {
+
+    line-height: 1.7;
+
+    white-space: pre-wrap;
+
+    color: #303946;
+}
+
+
+/* =========================
+   Quiz
+========================= */
+
+.quiz-question {
+
+    border:
+        1px solid
+        #e1e6ee;
+
+    border-radius: 14px;
+
+    padding: 16px;
+
+    margin: 14px 0;
+}
+
+
+.quiz-option {
+
+    display: block;
+
+    width: 100%;
+
+    text-align: left;
+
+    background: #f7f8fa;
+
+    color: #18202a;
+
+    margin-top: 8px;
+
+    border:
+        1px solid
+        #e1e6ee;
+}
+
+
+.quiz-option:hover {
+
+    background: #eef2f7;
+}
+
+
+.quiz-option.correct {
+
+    outline:
+        2px solid
+        #218739;
+}
+
+
+.quiz-option.wrong {
+
+    outline:
+        2px solid
+        #c63636;
+}
+
+
+.quiz-feedback {
+
+    font-weight: 700;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+
+    text-align: center;
+
+    color: #7a8491;
+
+    padding: 20px;
+
+    font-size: 14px;
+}
+
+
+footer span {
+
+    margin:
+        0 5px;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (
+    max-width: 600px
+) {
+
+    .container {
+
+        width:
+            calc(100% - 20px);
+
+        padding:
+            25px 0;
+    }
+
+
+    .card {
+
+        padding: 18px;
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+    }
+
+}
